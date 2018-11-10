@@ -1,0 +1,19 @@
+*Mô tả trò choi:
+-Có một hình vuông được chia thành 9x9 ô vuông con. Mỗi ô vuông con có giá trị trong khoảng từ 1 đến 9. Ban đầu hình vuông có một số ô vuông con cho truớc (có điền sẵn số) và còn lạii là ô trống. Hãy điền các số theo thứ tự 1-9 vào các ô con làm sao cho: hàng ngang là các số khác nhau từ 1 đến 9, hàng dọc là các số khác nhau từ 1 đến 9, và mỗi khối 3x3 chính là các số khác nhau từ 1 đến 9.
+
+*Mô tả thuật toán:
+- Ý tưởng thuật toán cung giống bài toán n quân hậu. Mỗi bước tìm tập các giá trị khả dĩ để điền vào ô trống, và sau dó đệ quy để điền ô tiếp theo. 
+
+*Thứ tự công việc:
+
+-1st: Chạy 81 ô - các ô dã điền (Ma trận 9x9)
+-2nd: Kiểm tra nếu ô # 0, gán ô dó =1
+-3rd: Xây dựng hàm: Feasible(Arr,x,y,k) kiểm tra k có khả dĩ với ô
+Arr[x][y] không.
+-4th: Nếu hợp lệ quay lai bước 2.
+-5th: Kiểm tra không hợp lệ, tang giá trị ô dó + 1, quay lui 
+bước 3. Nếu ô dó có giá trị = 9 reset ô dó = 0, dùng 
+backtracking quay lại ô truớc và tang giá trị ô dó +1, sau dó
+quay lại buớc 3.
+-6th: duyệt lần luợt đến cuối mảng.
+
